@@ -1,0 +1,108 @@
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+html,body{
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+}
+canvas{
+    border: 3px solid #ff23cc;
+}
+.palette{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #edff90;
+}
+.tool{
+    width: 130px;
+    height: 100%;
+    position: absolute;
+    left:0;
+    top:0;
+    border-right: 2px solid #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 30px 10px;
+
+}
+.tool>.box{
+    width: 100%;
+    height: 200px;
+    font-size: 30px;
+    text-align: center;
+    line-height:200px;
+    font-weight: 600;
+    color: #2f2f2f;
+}
+.tool>label{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #00c0a5;
+    padding: 5px 4px;
+    color: #000;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 600;
+    float: left;
+}
+.tool>label>input{
+    width: 40px;
+    height: 40px;
+}
+.tool>.lineWidth{
+    font-size: 20px;
+}
+.draw{
+    position: relative;
+    height: 100%;
+    margin-left: 130px;
+    border: 1px solid #0085d0;
+}
+.draw>.fun{
+    width: 100%;
+    height: 150px;
+    border:3px solid #4bbeff;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.draw>.screen{
+    width: 100%;
+    height: calc(100% - 150px);
+    border:3px solid #88ffcd;
+    position: relative;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.screen>.mask{
+    position: absolute;
+    left:0;
+    right: 0;
+    top:0;
+    bottom:0;
+    z-index: 100;
+}
+.screen>.eraer{
+    border: 1px solid #000;
+    position: absolute;
+    top:0;
+    left:0;
+    cursor: pointer;
+}
+.fun>label{
+    width: 50px;
+    height: 80px;
+    padding: 40px 30px;
+    font-size: 50px;
+    text-align: center;
+    line-height: 150px;
+}

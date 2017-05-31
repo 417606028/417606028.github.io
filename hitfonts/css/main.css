@@ -1,0 +1,97 @@
+.cloud{
+    width: 1000px;
+    height: 50px;
+    background: #0085;
+    position: absolute;
+    left: 0;
+    right:0;
+    margin: auto;
+    z-index: 999;
+    animation: yun 2s ease-in-out infinite alternate;
+}
+@keyframes yun {
+    from{
+        transform: translateX(-50px);
+    }
+    to{
+        transform: translateX(50px);
+    }
+}
+
+
+
+
+/*
+.imga{
+    width: 100px;
+    height:100px;
+    background: #ccc;
+    background-image: url("../img/zimu.jpg");
+    background-position: 0 -10px;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+}
+.imgb{
+    width: 100px;
+    height:100px;
+    background: #ccc;
+    background-image: url("../img/zimu.jpg");
+    background-position: -133px -10px;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+}
+.imgc{
+    width: 100px;
+    height:100px;
+    background: #ccc;
+    background-image: url("../img/zimu.jpg");
+    background-position: -233px -10px;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+}
+.imgd{
+    width: 100px;
+    height:100px;
+    background: #ccc;
+    background-image: url("../img/zimu.jpg");
+    background-position: -375px -10px;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+}
+.imge{
+    width: 100px;
+    height:100px;
+    background: #ccc;
+    background-image: url("../img/zimu.jpg");
+    background-position: -487px -10px;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+}
+.imgf{
+    width: 100px;
+    height:100px;
+    background: #ccc;
+    background-image: url("../img/zimu.jpg");
+    background-position: 0 -136px;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+}
+.imgg{
+    width: 100px;
+    height:100px;
+    background: #ccc;
+    background-image: url("../img/zimu.jpg");
+    background-position: -133px -136px;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+}
+.imgh{
+    width: 100px;
+    height:100px;
+    background: #ccc;
+    background-image: url("../img/zimu.jpg");
+    background-position: -233px -136px;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+}
+*/

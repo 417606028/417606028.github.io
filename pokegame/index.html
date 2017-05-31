@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--<style>
+    div[class=box]{
+        width: 0px;
+        height: 0px;
+        background: #0085d0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0px;
+        top:0;
+        margin:auto;
+    }
+    .circle{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top:0;
+    }
+</style>-->
+<style>
+    .table{
+        width: 700px;
+        height: 800px;
+        margin:20px auto;
+        position: relative;
+        background-image: url("img/deck.jpg");
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #ffffff;
+    }
+    .table .poke{
+        width: 90px;
+        height: 140px;
+        margin-top: 50px;
+        margin-left: 10px;
+        border-radius: 5px;
+        position: absolute;
+        left:50%;
+        background-position:center center;
+        background-size:cover;
+        background-repeat:no-repeat;
+        opacity: 0;
+    }
+    .active{
+        border: 3px solid #00a0e9;
+        box-shadow: 0 0 1px 1px #ffffff;
+        transform: translateY(-10px);
+    }
+    [class^=move]{
+        width: 80px;
+        height: 30px;
+        border-radius: 3px;
+        background: #ffac5e;
+        position: absolute;
+        top:700px;
+        left:40%;
+        text-align: center;
+        line-height: 30px;
+    }
+    [class=moveR]{
+        top: 740px;
+    }
+</style>
+<body>
+    <div class="table">
+        <div class="moveL"> < </div>
+        <div class="moveR"> > </div>
+    </div>
+</body>
+</html>
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="database.js"></script>
+<!--<script>
+    $(function () {
+        console.log(window)
+        let point=$(".box").get(0);
+        const Cw=$(window).outerWidth();
+        const Ch=$(window).outerHeight();
+        for(let i=0;i<1000;i++){
+            createCircle(i);
+        }
+        function createCircle(i) {
+            let lefts=Math.random()*Cw-30-(Cw/2);
+            let tops=Math.random()*Ch-30-(Ch/2);
+            let r=Math.floor(Math.random()*256);
+            let g=Math.floor(Math.random()*256);
+            let b=Math.floor(Math.random()*256);
+            let a=parseFloat(Math.random());
+            $("<div>").addClass("circle").css({background:`rgba(${r},${g},${b},${a})`}).animate({left:lefts,top:tops},"fast","swing").appendTo(point);
+        }
+        let points=$(".box");
+
+        points.on("mouseenter",".circle",function () {
+            $(this).css({transform:`scale(2,2)`})
+        })
+        points.on("mouseleave",".circle",function () {
+            $(this).css({transform:`scale(1,1)`})
+        })
+
+    })
+</script>-->
+
+

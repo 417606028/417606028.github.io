@@ -1,0 +1,155 @@
+*{
+    margin:0;
+    padding: 0;
+    list-style:none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+body{
+    background-image: url("../img/3.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.top{
+    width: 600px;
+    height: auto;
+    margin:20px auto;
+    font-size: 18px;
+    color: #bdff9d;
+    text-align: center;
+}
+.top>.song,.top>.singer{
+    font-size: 20px;
+}
+.top>.lyrics{
+    max-height: 348px;
+    overflow:hidden;
+}
+.top>.lyrics>li{
+    padding: 10px;
+}
+.top>.lyrics .hot{
+    color: #ff24c4;
+}
+.bottom{
+    width: 100%;
+    height: 100px;
+    background: rgba(0,0,0,.8);
+}
+.bottom>.content{
+    width: 1000px;
+    height: 100%;
+    margin: auto;
+}
+.content>.left{
+    width: 150px;
+    float: left;
+    height:100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.content>.left>.prev{
+    font-size: 50px;
+}
+audio{
+    display: none;
+}
+.left>.iconfont{
+    font-size: 40px;
+    color: #fff;
+}
+.content>.middle{
+    width: 650px;
+    margin:0 25px;
+    float: left;
+    height:100px;
+}
+.middle>img{
+    float: left;
+    width: 110px;
+    height: 100%;
+}
+.middle>.progress{
+    float: left;
+    width: 500px;
+    color: #ffffff;
+    margin:10px;
+}
+.progress>.pTop{
+    height: 30px;
+}
+.progress>.pBottom{
+    height: 50px;
+}
+.pTop>.info{
+    float: left;
+}
+.pTop>.time{
+    float: right;
+}
+.pBottom>.box{
+    width: 100%;
+    height:10px;
+    border-radius: 3px;
+    position:relative;
+    background: #2b42ff;
+}
+.pBottom>.box>.son{
+    width: 0;
+    height: 10px;
+    border-radius: 3px;
+    background: #fffc34;
+    position: absolute;
+    left: 0;
+    top:0;
+}
+.content>.right{
+    float: right;
+    width: 150px;
+    height:100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+.right>.iconfont{
+    font-size:40px;
+    color: #fff;
+
+}
+.right>.volumebox{
+    width: 8px;
+    height: 200px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 3px;
+    position: absolute;
+    top: -170%;
+    left:10%;
+    display: none;
+}
+.volumebox>.circle{
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top:100%;
+    left:0;
+    transform: translateY(-50%);
+}
+.volumemark{
+    width: 30px;
+    height: 200px;
+    opacity: 0;
+    border-radius: 3px;
+    position: absolute;
+    z-index: 10;
+    top: -170%;
+    left:10%;
+    cursor: pointer;
+}

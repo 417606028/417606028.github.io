@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <style>
+    	body{
+    		overflow: hidden;
+    	}
+		.point{
+			width: 1px;
+			height:1px;
+			background: #f40;
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+		}
+		.circle{
+			width: 10px;
+			height: 10px;
+			position: absolute;
+			top: 614px;
+			left: 699px;	
+			border-radius: 50%;
+			transition:all 1s ease;
+		}
+    </style>
+    <body>
+    	<button>点击</button>
+    	<div class="point"></div>
+    </body>
+</html>
+<script>
+	/*
+	(x,y) x+r*cos()
+	(x,y) y+r*sin()
+	 */
+	let point=document.querySelector('.point');
+	let btn=document.querySelector('button');
+	let x=point.offsetLeft;
+	let y=point.offsetTop;
+	let r=50;
+	let bili=Math.PI/180;
+	let colorArr=[0,1,2,3,4,5,6,7,8,9,'a','b','d','c','d','f',];
+	btn.onclick=function(){
+		let ch=window.innerHeight;
+		let cw=window.innerWidth;
+		for(let i=0;i<360;i++){
+			let j=i;
+			if(i%60==0){
+				if(i==0){
+					continue;
+				}
+				r+=25;
+				j=i%60;
+			}
+			console.log(j);
+			let deg=6*j*bili;
+			let ele=document.createElement('div');
+			ele.className='circle';
+			ele.style.transitionDelay=i*50+'ms';
+			document.body.appendChild(ele);
+			// let tops=-r*(2*Math.cos(deg)-Math.cos(2*deg));
+			let tops=r*Math.cos(deg)*(1+Math.cos(deg));
+			// let lefts=-r*(2*Math.sin(deg)-Math.sin(2*deg));
+			let lefts=r*Math.sin(deg)*(1+Math.cos(deg));
+			ele.style.left=Math.floor(Math.random()*cw)+'px';
+			ele.style.top=Math.floor(Math.random()*ch)+'px';
+			setTimeout(function(){
+				ele.style.left=x+lefts+'px';
+				ele.style.top=y+tops+'px';
+				ele.style.background=getColor();
+			}, 10);
+		}
+
+	}
+	function getColor(){
+		let color='#';
+		for(let i=0;i<6;i++){
+			let num=Math.floor(Math.random()*colorArr.length);
+			color+=colorArr[num];
+		}
+		return color;
+	}
+</script>
+<!-- <script src="animate.js"></script> -->

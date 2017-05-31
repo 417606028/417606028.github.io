@@ -1,0 +1,363 @@
+/*
+* @Author: MACHENIKE
+* @Date:   2017-03-29 14:05:28
+* @Last Modified by:   MACHENIKE
+* @Last Modified time: 2017-03-30 11:37:50
+*/
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+.ad{
+	width: 100%;
+	height: 40px;
+	background: #444;
+}
+.ad .adv{
+	width: 1000px;
+	height: 40px;
+	background: #444;
+	padding-right: 20px;
+	margin: 0 auto;
+}
+.ad .adv p{
+	float: right;
+	font-size: 12px;
+	color: #A8A8AA;
+	line-height: 40px;
+}
+nav{
+	width: 100%;
+	height: 44px;
+	background: rgba(0, 0, 0, 0.8);
+	position: relative;
+	z-index: 2;
+}
+nav .con1{
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+	line-height: 44px;
+	text-align: justify;
+}
+nav .con1 a:hover{
+	color: #A8A8AA;
+}
+nav .con2{
+	display: none;
+}
+nav .con2 a:hover{
+	color: #A8A8AA;
+}
+nav .con1 a{
+	display: inline-block;
+	font-family:  "SF Pro SC","HanHei SC","SF Pro Text","Myriad Set Pro","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+nav .con1:after{
+	content: "";
+	display: inline-block;
+	width: 100%;
+	height: 0px;
+}
+.wheel{
+	width: 100%;
+	height: 540px;
+	background: #CC3341;
+	position: absolute;
+	top: 40px;
+}
+.wheel .wheel_img{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/iphone7_large.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center 200px;
+	position: absolute;
+	top: 0;
+}
+.wheel .wheel1{
+	border: 2px solid #fff;
+	width: 49px;
+	height: 24px;
+	border-radius: 2px;
+	margin:88px auto;
+	margin-bottom: 0;
+	font-size: 12px;
+	color: #fff;
+	text-align: center;
+	line-height: 24px;
+}
+.wheel .wheel2{
+	color: #fff;
+	text-align: center;
+	margin-top: 20px;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.wheel .left1{
+	display: block;
+	width: 300px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 30px;
+	cursor:pointer;
+}
+.wheel .right1{
+	display: block;
+	width: 300px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 30px;
+	cursor:pointer;
+}
+#right{
+	display: block;
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	background:rgba(180, 180, 180, 0.25);
+	font-size: 30px;
+	text-align: center;
+	line-height: 64px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 20px;
+	margin: auto;
+}
+#left{
+	display: block;
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	background:rgba(180, 180, 180, 0.25);
+	font-size: 30px;
+	text-align: center;
+	line-height: 64px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 20px;
+	margin: auto;
+}
+.wheel .btn{
+	opacity: 0;
+}
+.btn2:hover .btn{
+	opacity: 1;
+}
+.btn:hover{
+	color: #000;
+}
+.main_pic{
+	width: 100%;
+	height: 200px;
+	position: absolute;
+	top: 580px;
+
+}
+.main_pic a{
+	display: block;
+	width: 25%;
+	height: 200px;
+	border: 1px solid #fff;
+	float: left;
+	padding-top: 2px;
+	padding-bottom: 2px;	
+	box-sizing: border-box;
+}
+.main_pic a:nth-child(1){
+	background-image: url('../img/w_large.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-left: 0px;
+	background-position: center center;
+}
+.main_pic a:nth-child(2){
+	background-image: url('../img/i_large.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* background-position: center center; */
+}
+.main_pic a:nth-child(3){
+	background-image: url('../img/a_large.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* background-position: center center; */
+}
+.main_pic a:nth-child(4){
+	background-image: url('../img/s_large.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-right: 0px;
+	/* background-position: center center; */
+}
+footer{
+	width: 100%;
+	height: 421px;
+	background: #F2F2F2;
+	position: absolute;
+	top: 780px;
+    font-family: "SF Pro SC","HanHei SC","SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+section{
+	width: 980px;
+	height: 50px;
+	margin: 0 auto;
+	border-bottom: 1px solid #D6D6D6;
+}
+footer .footertips{
+	width: 980px;
+	height: 21px;
+	color:#888888;
+	margin-top: 15px;
+	font-size: 11px;
+	letter-spacing: .005em;
+}
+footer .mainfooter{
+	width: 1000px;
+	height: 245px;
+	padding: 20px 10px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+	margin:0 auto;
+}
+footer .mainfooter div{
+	width: 20%;
+	height: auto;
+	float: left;
+
+}
+
+footer .mainfooter a{
+	display: block;
+	font-size: 11px;
+	margin-bottom: 5px;
+	color:#68818F;
+	width: auto;
+	height: 15px;
+	box-sizing: border-box;
+}
+footer .mainfooter p{
+	font-size: 14px;
+	color: #333;
+	margin-bottom: 5px;
+}
+footer .mainfooter a:hover{
+	color: #333;
+	text-decoration: underline;
+}
+footer .mainfooter .minfo3 .jyyy1{
+	margin-bottom: 20px;
+}
+footer .mainfooter .minfo4 .yun{
+	margin-bottom: 20px;
+}
+footer .navfooter{
+	width: 100%;
+	height: 489px;
+	padding: 20px 20px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+	display: none;
+}
+footer .navfooter p{
+	font-size: 14px;
+	color: #333;
+	margin-bottom: 5px;
+	border-bottom: 1px solid #D6D6D6;
+	cursor: pointer;
+}
+footer .navfooter a{
+	display: block;
+	color: #AA6886;
+	width: 100%;
+	height: 38px;
+	padding: 10px 0;
+	border-bottom: 1px solid #D6D6D6;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+footer .navfooter span{
+	display: block;
+	margin-right: 20px;
+	color: #333;
+	float: right;
+	transition: all 0.1s ease;
+}
+footer .navfooter a:hover{
+	color: #333;
+}
+footer .navfooter span:hover{
+	transform: rotateZ(45deg) scale(2, 2);
+	transform-origin: center;
+}
+footer .bottom{
+	width: 980px;
+	height: 109px;
+	margin: 0 auto;
+	font-size: 9px;
+}
+footer .bottom p{
+	width: 100%;
+	height: 38px;
+	padding-top: 7px;
+	padding-bottom: 6px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #D6D6D6;
+
+	letter-spacing: 0.005em;
+}
+footer .bottom p .sq{
+	color: #0070C9;
+}
+footer .bottom p .sq:hover{
+	text-decoration: underline;
+}
+footer .bottom .copy a{
+	color: #68818F;
+}
+footer .bottom .copy{
+	clear: both;
+	color: #68818F;
+}
+footer .bottom span{
+	display: block;
+	margin-right: 30px;
+	margin-top: 3px;
+	font-size: 11px;
+	color: #68818F;
+	float: left;
+}
+footer .bottom .notice a{
+	display: block;
+	width: auto;
+	height: 21px;
+	padding-right: 12px;
+	border-right: 1px solid #D6D6D6;
+	margin-right: 10px;
+	float: left;
+	font-size: 11px;
+	color: #68818f;
+	margin-top: 3px;
+}
+footer .bottom .notice .sitemap{
+	margin-right: 0;
+	padding-right: 0;
+}
+footer .bottom .notice a:hover{
+	text-decoration: underline;
+	color: #333;
+}
