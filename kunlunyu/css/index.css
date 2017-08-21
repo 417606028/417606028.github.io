@@ -438,7 +438,7 @@ html,body{
     height: 1.2rem;
     background-image: url("../img/end_07.png");
     background-position: center;
-    background-size: cover;
+    background-size:contain;
     position: absolute;
     top:5.8rem;
     left: 0;
