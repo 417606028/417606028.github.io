@@ -22,7 +22,7 @@ function progress(el, callback) {
 }
 progress($(".start span"), function () {
     autoplay();
-    $('.music').trigger('click');
+    // $('.music').trigger('click');
     $(".start").hide();
     $("#home").show();
 });
