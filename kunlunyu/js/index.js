@@ -21,7 +21,7 @@ function progress(el, callback) {
 
 }
 progress($(".start span"), function () {
-    // $('.music').trigger('click');
+    $('.music').trigger('click');
     $(".start").hide();
     $("#home").show();
 });
