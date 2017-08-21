@@ -1,3 +1,4 @@
+
 function progress(el, callback) {
     var num = 0;
     var t = setInterval(function () {
@@ -12,6 +13,7 @@ function progress(el, callback) {
 
    window.onload = function () {
         clearInterval(t);
+
         el.html("100%");
         if (callback) {
             callback();
@@ -20,8 +22,7 @@ function progress(el, callback) {
 
 }
 progress($(".start span"), function () {
-    // autoplay();
-    autoplay2();
+    autoplay();
     $(".start").hide();
     $("#home").show();
 });
@@ -35,28 +36,18 @@ $(".entry").click(function(){
     $(".first").show();
 });
 
-var media = $('audio').get(0);
+
 function autoplay() {
     if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
         WeixinJSBridge.invoke('getNetworkType', {}, function (res) {
             // 在这里拿到 e.err_msg, 这里面就包含了所有的网络类型
             // alert(res.err_msg);
-            media.play();
+            $('audio').get(0).play();
         });
     }else{
         // console.log(1);
     }
 }
-function autoplay2() {
-    wx.config({
-        // 配置信息
-    });
-    wx.ready(function () {
-        media.play();
-    });
-}
-
-
 function move(now,next,time){
    now.find(".name").click(function(){
    now.find(".font").addClass(function(index){
@@ -93,14 +84,13 @@ $(".fifth .name").click(function(){
     },4000)
 });
 $(".music").click(function(){
-    if(media.paused){
-       media.play();
+    if($('audio').get(0).paused){
+        $('audio').get(0).play();
        $(this).toggleClass("active");
     }else{
-        media.pause();
+        $('audio').get(0).pause();
     }
 });
-$('.music').triggerHandler('click');
 $(".restart").click(function(){
     $("#end").hide();
     $("#home").show();
