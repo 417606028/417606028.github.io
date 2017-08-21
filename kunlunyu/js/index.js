@@ -21,6 +21,7 @@ function progress(el, callback) {
 }
 progress($(".start span"), function () {
     autoplay();
+    autoplay2();
     $(".start").hide();
     $("#home").show();
 });
@@ -46,7 +47,14 @@ function autoplay() {
         // console.log(1);
     }
 }
-
+function autoplay2() {
+    wx.config({
+        // 配置信息
+    });
+    wx.ready(function () {
+        media.play();
+    });
+}
 
 
 function move(now,next,time){
