@@ -426,7 +426,7 @@ html,body{
     height: .87rem;
     background-image: url("../img/high.png");
     background-position: center;
-    background-size:cover;
+    background-size:contain;
     position: absolute;
     top: 4.8rem;
     left: 0;
