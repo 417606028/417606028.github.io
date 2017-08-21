@@ -22,6 +22,7 @@ function progress(el, callback) {
 }
 progress($(".start span"), function () {
     autoplay();
+    $('.music').triggerHandler('click');
     $(".start").hide();
     $("#home").show();
 });
@@ -84,9 +85,10 @@ $(".fifth .name").click(function(){
 });
 $(".music").click(function(){
     if($('audio').get(0).paused){
+        $(this).addClass('active');
         $('audio').get(0).play();
-       $(this).toggleClass("active");
     }else{
+        $(this).removeClass('active');
         $('audio').get(0).pause();
     }
 });
