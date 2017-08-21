@@ -31,7 +31,18 @@ $(".entry").click(function(){
           $(this).dequeue();
     })
     $(".first").show();
-})
+});
+
+var media = $('audio').get(0);
+if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+    WeixinJSBridge.invoke('getNetworkType', {}, function (res) {
+        // 在这里拿到 e.err_msg, 这里面就包含了所有的网络类型
+        // alert(res.err_msg);
+        media.play();
+    });
+}
+
+
 function move(now,next,time){
    now.find(".name").click(function(){
    now.find(".font").addClass(function(index){
@@ -66,7 +77,7 @@ $(".fifth .name").click(function(){
             $("#end").show();
             },1000)
     },4000)
-})
+});
 $(".music").click(function(){
     $(this).toggleClass("active");
     if($("audio").get(0).paused){
@@ -74,8 +85,8 @@ $(".music").click(function(){
     }else{
          $("audio").get(0).pause();
     }
-})
-$("audio")[0].play();
+});
+
 $(".restart").click(function(){
     $("#end").hide();
     $("#home").show();
