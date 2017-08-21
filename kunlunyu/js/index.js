@@ -20,7 +20,7 @@ function progress(el, callback) {
 
 }
 progress($(".start span"), function () {
-    autoplay();
+    // autoplay();
     autoplay2();
     $(".start").hide();
     $("#home").show();
@@ -93,14 +93,14 @@ $(".fifth .name").click(function(){
     },4000)
 });
 $(".music").click(function(){
-    $(this).toggleClass("active");
     if(media.paused){
        media.play();
+       $(this).toggleClass("active");
     }else{
         media.pause();
     }
 });
-
+$('.music').triggerHandler('click');
 $(".restart").click(function(){
     $("#end").hide();
     $("#home").show();
