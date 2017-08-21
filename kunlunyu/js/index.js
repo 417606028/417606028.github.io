@@ -21,6 +21,7 @@ function progress(el, callback) {
 
 }
 progress($(".start span"), function () {
+    autoplay();
     $('.music').trigger('click');
     $(".start").hide();
     $("#home").show();
@@ -34,6 +35,17 @@ $(".entry").click(function(){
     })
     $(".first").show();
 });
+function autoplay() {
+    if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+        WeixinJSBridge.invoke('getNetworkType', {}, function (res) {
+            // 在这里拿到 e.err_msg, 这里面就包含了所有的网络类型
+            // alert(res.err_msg);
+            $('audio').get(0).play();
+        });
+    }else{
+        // console.log(1);
+    }
+}
 function move(now,next,time){
    now.find(".name").click(function(){
    now.find(".font").addClass(function(index){
