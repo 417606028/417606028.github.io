@@ -20,6 +20,7 @@ function progress(el, callback) {
 
 }
 progress($(".start span"), function () {
+    autoplay();
     $(".start").hide();
     $("#home").show();
 });
@@ -34,13 +35,18 @@ $(".entry").click(function(){
 });
 
 var media = $('audio').get(0);
-if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
-    WeixinJSBridge.invoke('getNetworkType', {}, function (res) {
-        // 在这里拿到 e.err_msg, 这里面就包含了所有的网络类型
-        alert(res.err_msg);
-        media.play();
-    });
+function autoplay() {
+    if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+        WeixinJSBridge.invoke('getNetworkType', {}, function (res) {
+            // 在这里拿到 e.err_msg, 这里面就包含了所有的网络类型
+            // alert(res.err_msg);
+            media.play();
+        });
+    }else{
+        // console.log(1);
+    }
 }
+
 
 
 function move(now,next,time){
