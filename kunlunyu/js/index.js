@@ -13,7 +13,6 @@ function progress(el, callback) {
 
    window.onload = function () {
         clearInterval(t);
-
         el.html("100%");
         if (callback) {
             callback();
