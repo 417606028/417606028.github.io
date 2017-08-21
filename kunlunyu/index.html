@@ -13,7 +13,7 @@
 </head>
 <body>
     <div id="app">
-        <audio src="./bgm.mp3" preload="auto" loop ></audio>
+        <audio id="audio" src="./bgm.mp3" preload="auto" loop ></audio>
         <div class="start">
             <div class="loading">
                 <span>0%</span>
@@ -153,5 +153,17 @@
 
     </div>
     <script src="./js/index.js"></script>
+    <span style="font-size:18px;"><strong><script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script></strong></span>
+    <span style="font-size:18px;"><strong>
+        <script type="text/javascript">
+     var media = document.getElementById("audio");
+     console.log(media);
+        wx.config({
+            // 配置信息
+        });
+        wx.ready(function () {
+             media.play();
+        });
+</script></strong></span>
 </body>
 </html>
