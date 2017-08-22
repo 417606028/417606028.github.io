@@ -628,8 +628,8 @@ html,body{
 
     100%{
         opacity: 0;
-        transform: translate(-100%,0);
-        -webkit-transform: translate(-100%,0);
+        transform: translate(-7.5rem,0);
+        -webkit-transform: translate(-7.5rem,0);
     }
 }
 @-webkit-keyframes out {
@@ -641,8 +641,8 @@ html,body{
 
     100%{
         opacity: 0;
-        transform: translate(-100%,0);
-        -webkit-transform: translate(-100%,0);
+        transform: translate(-7.5rem,0);
+        -webkit-transform: translate(-7.5rem,0);
     }
 }
 @keyframes out1 {
@@ -658,7 +658,7 @@ html,body{
         -webkit-transform: translate(-100%,0);
     }
 }
-@-webkit-keyframes out {
+@-webkit-keyframes out1 {
     0%{
         opacity: 1;
         transform: translate(0,0);
@@ -667,18 +667,18 @@ html,body{
 
     100%{
         opacity: 1;
-        transform: translate(-7.5rem,0);
-        -webkit-transform: translate(-7.5rem,0);
+        transform: translate(-100%,0);
+        -webkit-transform: translate(-100%,0);
     }
 }
 .out3{
-    -webkit-animation: out .9s linear  forwards;
+    -webkit-animation: out .8s linear  forwards;
 }
 .out2{
-    -webkit-animation: out .7s linear  forwards;
+    -webkit-animation: out .5s linear  forwards;
 }
 .out1{
-    -webkit-animation: out .5s linear forwards;
+    -webkit-animation: out .3s linear forwards;
 }
 .out0{
     -webkit-animation: out .2s linear  forwards;
