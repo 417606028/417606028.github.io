@@ -59,14 +59,14 @@ function move(now,next,time){
     }).delay(time).queue(function(){
         $("#content,#silk").css("animation-play-state","running");
        setTimeout(function(){
-            now.find('.childs').add().addClass("out").delay(time).queue(function(){
+           now.find('.wraper').removeClass('backruns').css("left","0");
+            now.children().add().addClass("out").delay(time).queue(function(){
 
                 $(this).hide().dequeue();
             });
             setTimeout(function(){
              now.hide();
            $("#content,#silk").css("animation-play-state","paused");
-           now.find('.wraper').css("animation-play-state","paused");
              next.show();
             },500)
         },2500);
