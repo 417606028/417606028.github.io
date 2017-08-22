@@ -113,9 +113,11 @@ html,body{
 @keyframes slide {
     form{
         transform: translateX(0);
+        -webkit-transform: translateX(0);
     }
     to{
         transform: translateX(.2rem);
+        -webkit-transform: translateX(.2rem);
     }
 }
 #content{
@@ -493,17 +495,21 @@ html,body{
 @keyframes button {
     0%{
         transform: translate(0,0);
+        -webkit-transform: translate(0,0);
     }
     100%{
         transform: translate(10px,0);
+        -webkit-transform: translate(10px,0);
     }
 }
 @-webkit-keyframes button {
     0%{
         transform: translate(0,0);
+        -webkit-transform: translate(0,0);
     }
     100%{
         transform: translate(10px,0);
+        -webkit-transform: translate(10px,0);
     }
 }
 @keyframes enter {
@@ -524,51 +530,71 @@ html,body{
 }
 @keyframes move {
     0%{
-    transform: translateX(0);
+    transform: translate(0);
+        -webkit-transform: translate(0);
     }
     100%{
-      transform: translateX(-100%);
+      transform: translate(-100%,0);
+        -webkit-transform: translate(-100%,0);
     }
 }
 @-webkit-keyframes move {
     0%{
-    transform: translateX(0);
+    transform: translate(0,0);
+        -webkit-transform: translate(0,0);
     }
     100%{
-      transform: translateX(-100%);
+      transform: translate(-100%,0);
+        -webkit-transform: translate(-100%,0);
     }
 }
 
+.wraper{
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    left: 0;
+    bottom:0;
+    z-index: 99;
+}
 .backrun{
     animation: backrun 15s linear forwards;
+    -webkit-animation: backrun 15s linear forwards;
+}
+.backruns{
+    animation: move 4s linear paused forwards;
+    -webkit-animation: move 4s linear paused forwards;
 }
 .backrunfast{
     animation: move 2s linear forwards;
+    -webkit-animation: move 2s linear forwards;
 }
 .goon{
     animation:button 1s linear infinite alternate ;
+    -webkit-animation:button 1s linear infinite alternate ;
 }
 
 
 .order1{
     opacity: 0;
     animation: enter 1s ease forwards ;
+    -webkit-animation: enter 1s ease forwards ;
 }
 .orderlong{
     opacity: 0;
-    animation: enter 5s ease forwards ;
+    -webkit-animation: enter 5s ease forwards ;
 }
 .order2{
     opacity: 0;
-    animation: enter 1s ease forwards 1s;
+    -webkit-animation: enter 1s ease forwards 1s;
 }
 .order3{
     opacity: 0;
-    animation: enter 1s ease forwards 2s;
+    -webkit-animation: enter 1s ease forwards 2s;
 }
 .order4{
     opacity: 0;
-    animation: enter 1s ease forwards 3s;
+    -webkit-animation: enter 1s ease forwards 3s;
 }
 .room1{
     width:3.52rem;
@@ -595,26 +621,30 @@ html,body{
     0%{
         opacity: 1;
         transform: translate(0,0);
+        -webkit-transform: translate(0,0);
     }
 
     100%{
         opacity: 0;
         transform: translate(-100%,0);
+        -webkit-transform: translate(-100%,0);
     }
 }
 @-webkit-keyframes out {
     0%{
         opacity: 1;
         transform: translate(0,0);
+        -webkit-transform: translate(0,0);
     }
 
     100%{
         opacity: 0;
         transform: translate(-100%,0);
+        -webkit-transform: translate(-100%,0);
     }
 }
 .out{
-    animation: out 1s ease forwards;
+    -webkit-animation: out 1s ease forwards;
 }
 .stone{
     width:1.8rem;
@@ -675,22 +705,26 @@ html,body{
 
 }
 .active{
-    animation: rotate 2s linear infinite;
+    -webkit-animation: rotate 2s linear infinite;
 }
 @keyframes rotate {
    0%{
        transform:rotate(0deg);
+       -webkit-transform:rotate(0deg);
    }
     100%{
         transform:rotate(360deg);
+        -webkit-transform:rotate(360deg);
     }
 }
 @-webkit-keyframes rotate {
    0%{
        transform:rotate(0deg);
+       -webkit-transform:rotate(0deg);
    }
     100%{
         transform:rotate(360deg);
+        -webkit-transform:rotate(360deg);
     }
 }
 .restart{

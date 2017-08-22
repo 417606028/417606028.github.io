@@ -48,15 +48,23 @@ function autoplay() {
 }
 function move(now,next,time){
    now.find(".name").click(function(){
+       $('.wraper').addClass('backruns');
+       now.find('.wraper').delay(time).queue(function () {
+           $(this).css("animation-play-state","running").dequeue();
+       });
    now.find(".font").addClass(function(index){
         return "order"+(index+1);
     }).delay(time).queue(function(){
         $("#content,#silk").css("animation-play-state","running");
-        setTimeout(function(){
-            now.children().addClass("out");
+       setTimeout(function(){
+            now.find('.childs').addClass("out").delay(time).queue(function(){
+
+                $(this).hide().dequeue();
+            });
             setTimeout(function(){
              now.hide();
            $("#content,#silk").css("animation-play-state","paused");
+           now.find('.wraper').css("animation-play-state","paused");
              next.show();
             },500)
         },2500);
@@ -94,9 +102,10 @@ $(".restart").click(function(){
     $("#end").hide();
     $("#home").show();
    $("#content,#silk").removeClass("backrun");
-    $(".item").children().removeClass("out");
+   $('.wraper').removeClass('backruns');
+    $(".item").children().removeClass("out").show();
     $(".font").attr("class","font");
-   media.load();
+    media.load();
     media.play();
     $(".music").addClass("active");
 })
