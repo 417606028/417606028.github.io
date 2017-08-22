@@ -672,13 +672,13 @@ html,body{
     }
 }
 .out3{
-    -webkit-animation: out 1.2s linear  forwards;
+    -webkit-animation: out .5s linear  forwards;
 }
 .out2{
-    -webkit-animation: out .8s linear  forwards;
+    -webkit-animation: out .5s linear  forwards;
 }
 .out1{
-    -webkit-animation: out .6s linear forwards;
+    -webkit-animation: out .5s linear forwards;
 }
 .out0{
     -webkit-animation: out .2s linear  forwards;

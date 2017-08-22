@@ -74,14 +74,8 @@ function move(now,next,time){
             setTimeout(function(){
              now.hide();
            $("#content,#silk").css("animation-play-state","paused");
-                now.find('.childs').removeClass(function (index) {
-                    return "out"+index;
-                }).delay(time).queue(function(){
-
-                    $(this).show().dequeue();
-                });
              next.show();
-            },3000)
+            },2500)
         },500);
        $(this).dequeue();
     })
@@ -119,11 +113,18 @@ $(".restart").click(function(){
     $("#home").show();
    $("#content,#silk").removeClass("backrun");
    $('.wraper').show();
+    $('.item').each((i,v)=>{
+       $(v).each((j,k)=>{
+           $(k).find('.childs').removeClass(function (index) {
+               return "out"+index;
+           }).show().dequeue();
+       })
+    });
     $(".font").attr("class","font");
     media.load();
     media.play();
     $(".music").addClass("active");
-})
+});
 // document.querySelector(".welcome .button").onclick = function () {
 //     document.querySelector(".welcome").style.display = "none";
 //     document.querySelector(".box").className = "box backrun";
