@@ -667,15 +667,15 @@ html,body{
 
     100%{
         opacity: 1;
-        transform: translate(-100%,0);
-        -webkit-transform: translate(-100%,0);
+        transform: translate(-7.5rem,0);
+        -webkit-transform: translate(-7.5rem,0);
     }
 }
 .out3{
-    -webkit-animation: out .5s linear  forwards;
+    -webkit-animation: out .9s linear  forwards;
 }
 .out2{
-    -webkit-animation: out .5s linear  forwards;
+    -webkit-animation: out .7s linear  forwards;
 }
 .out1{
     -webkit-animation: out .5s linear forwards;
