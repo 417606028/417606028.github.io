@@ -81,7 +81,7 @@ function move(now,next,time){
                     $(this).show().dequeue();
                 });
              next.show();
-            },2500)
+            },3000)
         },500);
        $(this).dequeue();
     })
