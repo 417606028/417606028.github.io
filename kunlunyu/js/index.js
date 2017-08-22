@@ -70,16 +70,16 @@ function move(now,next,time){
 
                $(this).hide().removeClass("outX").css("left","100%").dequeue();
            });
-           now.find('.childs').removeClass(function (index) {
-               return "out"+index;
-           }).delay(time).queue(function(){
 
-               $(this).show().dequeue();
-           });
             setTimeout(function(){
              now.hide();
            $("#content,#silk").css("animation-play-state","paused");
+                now.find('.childs').removeClass(function (index) {
+                    return "out"+index;
+                }).delay(time).queue(function(){
 
+                    $(this).show().dequeue();
+                });
              next.show();
             },2500)
         },500);
