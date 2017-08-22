@@ -564,6 +564,7 @@ html,body{
 .backruns{
     animation: move 4s linear paused forwards;
     -webkit-animation: move 4s linear paused forwards;
+
 }
 .backrunfast{
     animation: move 2s linear forwards;
