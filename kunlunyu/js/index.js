@@ -29,8 +29,10 @@ progress($(".start span"), function () {
 $(".entry").click(function(){
     $("#home").hide();
     $("#content,#silk").addClass("backrun");
+    $('.first .wraper').addClass('backruns');
     $("#content,#silk").show().delay(3000).queue(function(){
           $(this).css("animation-play-state","paused");
+          $(".first .wraper").show().css({animationPlayState:"paused"});
           $(this).dequeue();
     })
     $(".first").show();
@@ -48,7 +50,7 @@ function autoplay() {
 }
 function move(now,next,time){
    now.find(".name").click(function(){
-       $('.wraper').addClass('backruns');
+      now.find('.wraper').addClass('backruns');
        now.find('.wraper').delay(time).queue(function () {
            $(this).css("animation-play-state","running").dequeue();
        });
@@ -57,7 +59,7 @@ function move(now,next,time){
     }).delay(time).queue(function(){
         $("#content,#silk").css("animation-play-state","running");
        setTimeout(function(){
-            now.find('.childs').addClass("out").delay(time).queue(function(){
+            now.find('.childs').add().addClass("out").delay(time).queue(function(){
 
                 $(this).hide().dequeue();
             });
@@ -93,6 +95,7 @@ $(".music").click(function(){
     if($('audio').get(0).paused){
         $(this).addClass('active');
         $('audio').get(0).play();
+
     }else{
         $(this).removeClass('active');
         $('audio').get(0).pause();
