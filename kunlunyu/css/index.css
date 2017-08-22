@@ -13,6 +13,7 @@
 html,body{
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 #app{
     overflow:hidden;
@@ -558,7 +559,7 @@ html,body{
     z-index: 99;
 }
 .backrun{
-    animation: backrun 15s linear forwards;
+    animation: backrun 20s linear forwards;
     -webkit-animation: backrun 15s linear forwards;
 }
 .backruns{
@@ -567,8 +568,8 @@ html,body{
 
 }
 .backrunfast{
-    animation: move 2s linear forwards;
-    -webkit-animation: move 2s linear forwards;
+    animation: move 1s linear forwards;
+    -webkit-animation: move 1s linear forwards;
 }
 .goon{
     animation:button 1s linear infinite alternate ;
@@ -644,8 +645,46 @@ html,body{
         -webkit-transform: translate(-100%,0);
     }
 }
-.out{
-    -webkit-animation: out 1s ease forwards;
+@keyframes out1 {
+    0%{
+        opacity: 1;
+        transform: translate(0,0);
+        -webkit-transform: translate(0,0);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(-100%,0);
+        -webkit-transform: translate(-100%,0);
+    }
+}
+@-webkit-keyframes out {
+    0%{
+        opacity: 1;
+        transform: translate(0,0);
+        -webkit-transform: translate(0,0);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(-100%,0);
+        -webkit-transform: translate(-100%,0);
+    }
+}
+.out3{
+    -webkit-animation: out 1.5s linear  forwards;
+}
+.out2{
+    -webkit-animation: out .8s linear  forwards;
+}
+.out1{
+    -webkit-animation: out .6s linear forwards;
+}
+.out0{
+    -webkit-animation: out .2s linear  forwards;
+}
+.outX{
+    -webkit-animation: out1 3s ease forwards;
 }
 .stone{
     width:1.8rem;

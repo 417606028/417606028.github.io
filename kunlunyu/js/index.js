@@ -60,24 +60,36 @@ function move(now,next,time){
         $("#content,#silk").css("animation-play-state","running");
        setTimeout(function(){
            now.find('.wraper').removeClass('backruns').css("left","0");
-            now.children().add().addClass("out").delay(time).queue(function(){
+            now.find('.childs').addClass(function (index) {
+                return "out"+index;
+            }).delay(time).queue(function(){
 
                 $(this).hide().dequeue();
             });
+           now.find('.wraper').addClass("outX").delay(time).queue(function(){
+
+               $(this).hide().removeClass("outX").css("left","100%").dequeue();
+           });
             setTimeout(function(){
              now.hide();
            $("#content,#silk").css("animation-play-state","paused");
+                now.find('.childs').removeClass(function (index) {
+                    return "out"+index;
+                }).delay(time).queue(function(){
+
+                    $(this).show().dequeue();
+                });
              next.show();
-            },500)
-        },2500);
+            },2500)
+        },0);
        $(this).dequeue();
     })
 })
 }
 move($(".first"),$(".second"),3000);
 move($(".second"),$(".third"),4000);
-move($(".third"),$(".fourth"),2000);
-move($(".fourth"),$(".fifth"),2000);
+move($(".third"),$(".fourth"),3000);
+move($(".fourth"),$(".fifth"),3000);
 $(".fifth .name").click(function(){
  $(".fifth .font").addClass(function(index){
         return "order"+(index+1);
@@ -105,8 +117,7 @@ $(".restart").click(function(){
     $("#end").hide();
     $("#home").show();
    $("#content,#silk").removeClass("backrun");
-   $('.wraper').removeClass('backruns');
-    $(".item").children().removeClass("out").show();
+   $('.wraper').show();
     $(".font").attr("class","font");
     media.load();
     media.play();
