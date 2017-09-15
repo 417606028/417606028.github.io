@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+<style>
+    .file {
+        position: relative;
+        display: inline-block;
+        background: #D0EEFF;
+        border: 1px solid #99D3F5;
+        border-radius: 4px;
+        padding: 4px 12px;
+        overflow: hidden;
+        color: #1E88C7;
+        text-decoration: none;
+        text-indent: 0;
+        line-height: 20px;
+    }
+    .file input {
+        position: absolute;
+        font-size: 100px;
+        right: 0;
+        top: 0;
+        opacity: 0;
+    }
+    .file:hover {
+        background: #AADFFD;
+        border-color: #78C3F3;
+        color: #004974;
+        text-decoration: none;
+    }
+</style>
+<body>
+<a href="#abc">dadadaa</a>
+<a href="">dadada111</a>
+<div id="abc"></div>
+<div id="ass">
+    <div class="box">
+        <div class=".box"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div></div>
+    
+</div>
+<a href="javascript:;" class="a-upload">
+    <input type="file" name="" id="a">点击这里上传文件
+</a>
+
+<a href="javascript:;" class="file">选择文件
+    <input type="file" name="" id="b">
+</a>
+</body>
+</html>
+<script>
+
+    $(`#ass .${$.escapeSelector('.box')}`);
+
+    $( "div" ).find( "." + $.escapeSelector( ".box" ) );
+</script>
