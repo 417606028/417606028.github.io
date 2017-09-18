@@ -1,0 +1,31 @@
+html超文本标记语言    结构   骨架
+css   表现   血肉皮肤  
+js	交互行为  内在
+
+html:5  tab ->快速生成页面结构
+body标签内：div->tab  div标签；
+
+link ——》tab  href=''
+css  *  通配选择器；
+选择器{样式}；
+.box{
+  width:200px;//宽度；
+  height:200px;//高度；
+  background:red;//背景色
+}
+*{
+  margin：0；
+  padding：0；
+  list-style:none;
+}
+图片的两种引入方式：
+1.img+tab-》img标签 src=‘相对路径’；
+2.通过css设置某个元素的
+通过CSS设置某个元素的背景图片的方式：
+
+background-image:url('相对路径（css文件）')；
+background-size:contain
+background-size:cover;
+background-repeat:no-repeat;
+background-position:center;
+

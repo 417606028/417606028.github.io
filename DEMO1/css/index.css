@@ -1,0 +1,33 @@
+/*
+* @Author: MACHENIKE
+* @Date:   2017-09-18 17:41:16
+* @Last Modified by:   MACHENIKE
+* @Last Modified time: 2017-09-18 20:33:33
+*/
+/* ctrl + *  */
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+.dahezi{
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/bg.png');
+	background-size: cover;
+	background-position: center;
+}
+.huajuan{
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/huajuan.png');
+	background-size: cover;
+	background-position: center;
+}
+
+
+
