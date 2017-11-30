@@ -69,6 +69,7 @@
 			let lefts=r*Math.sin(deg)*(1+Math.cos(deg));
 			ele.style.left=Math.floor(Math.random()*cw)+'px';
 			ele.style.top=Math.floor(Math.random()*ch)+'px';
+			ele.style.background=getColor();
 			setTimeout(function(){
 				ele.style.left=x+lefts+'px';
 				ele.style.top=y+tops+'px';
